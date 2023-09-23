@@ -52,22 +52,24 @@ a:hover {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Das Bild wird gestreckt, um den gesamten Container zu füllen */
-  position: fixed; /* Das Bild wird fixiert, um es hinter anderen Elementen anzuzeigen */
+  object-fit: cover;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; /* Hintergrundbild unter anderen Elementen */
+  z-index: -1;
 }
 
 /* Stile für den Container, um den Button zu zentrieren */
 .container {
-  position: relative; /* Damit der Button relativ zum Container zentriert wird */
-  text-align: center; /* Zentriert den Text und Button horizontal */
-  padding-top: 50vh; /* Verschiebt den Inhalt um die Hälfte der Bildschirmhöhe nach unten */
+  position: relative;
+  text-align: center;
+  padding-top: 50vh;
 }
 
-/* Stile für den Button */
+/* Stile für den Button, mit einer höheren z-index */
 .button {
+  position: relative;
+  z-index: 1; /* Button wird über dem Bild angezeigt */
   padding: 10px 20px;
   background-color: #007BFF;
   color: #fff;
@@ -79,14 +81,11 @@ img {
   transition: background-color 0.3s;
 }
 
-
 @media (max-width: 768px) {
   .button {
     padding: 8px 16px; /* Beispielstil für kleinere Bildschirme */
   }
 }
-
-
 
 .button:hover {
   background-color: #0056b3;
