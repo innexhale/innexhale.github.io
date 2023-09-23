@@ -79,6 +79,7 @@ img {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
